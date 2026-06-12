@@ -1,0 +1,72 @@
+.message-info__toast {
+  background: #1f1f1f !important;
+
+  color: white;
+
+  border-radius: 14px !important;
+
+  padding: 16px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(10px);
+}
+
+/* TEXTO */
+.message-info__body {
+  padding: 0;
+  margin: 0;
+
+  color: white;
+}
+
+/* BARRA */
+.message-info__progress {
+  height: 4px;
+}
+
+/* ÍCONE BASE */
+.Toastify__toast-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* SUCCESS */
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: #2ecc71 !important;
+}
+
+/* ERROR */
+.Toastify__toast--error .Toastify__toast-icon svg {
+  fill: #e74c3c !important;
+}
+
+/* WARNING */
+.Toastify__toast--warning .Toastify__toast-icon svg {
+  fill: #f1c40f !important;
+}
+
+/* INFO */
+.Toastify__toast--info .Toastify__toast-icon svg {
+  fill: #3498db !important;
+}
+
+/* BOTÃO FECHAR */
+.Toastify__close-button {
+  color: white !important;
+
+  opacity: 0.7;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}

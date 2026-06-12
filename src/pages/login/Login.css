@@ -1,0 +1,83 @@
+/** cor fundo dos card #dfe1e2 */
+/** cor borda dos input e letras #4e565f */
+/** cor fundo dos input #d4d8dd */
+/** cor de hover  #bbc3ce */
+/** cor hover buttom  #dbdb47 */
+/** cor fundo buttom  #555b60 */
+
+.div-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  border: 1px solid red; /*!-------------------------------------------------------->  /*! remover */
+}
+
+.div-form-login {
+  background-color: #dfe1e2;
+  height: 40%;
+  width: 400px;
+  min-width: 400px;
+  min-height: 400px;
+  border-radius: 16px;
+  color: #000;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  display: flex;
+  padding: 40px;
+}
+
+.formulario-login {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  display: flex;
+}
+
+.image-form {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 40px;
+}
+
+.input-login {
+  border: 1px solid #4e565f;
+  border-radius: 30px;
+  height: 40px;
+  width: 300px;
+  background-color: #d4d8dd;
+  color: #4e565f;
+  font-size: 16px;
+  padding-left: 16px;
+  outline: none;
+}
+
+.input-login:hover {
+  background-color: #bbc3ce;
+}
+
+.buttom-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 300px;
+  height: 40px;
+  border-radius: 16px;
+  border-color: #4e565f;
+  background-color: #555b60;
+  border-width: 1px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #dfe1e2;
+}
+
+.buttom-login:hover {
+  background-color: #dbdb47;
+  color: #555b60;
+}

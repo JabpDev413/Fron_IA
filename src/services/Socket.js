@@ -1,0 +1,65 @@
+let socket = null;
+
+export function conectarWebSocket({ onMessage, onOpen, onClose, onError }) {
+  const token = sessionStorage.getItem("token");
+  socket = new WebSocket(`ws://172.16.251.22:9191/api/messages?token=${token}`);
+
+  socket.onopen = () => {
+    console.log("WebSocket conectado");
+
+    if (onOpen) {
+      onOpen();
+    }
+  };
+
+  socket.onmessage = (event) => {
+    try {
+      const body = JSON.parse(event.data);
+      console.log("RAW WS:", event.data);
+      console.log("RAW body:", body);
+      if (onMessage) {
+        onMessage(body);
+      }
+    } catch {
+      if (onMessage) {
+        onMessage(event.data);
+      }
+    }
+  };
+
+  socket.onclose = () => {
+    console.log("WebSocket desconectado");
+    setTimeout(() => {
+      conectarWebSocket({
+        onOpen,
+        onMessage,
+        onClose,
+        onError,
+      });
+    }, 2000);
+
+    // if (onClose) {
+    //   onClose();
+    // }
+  };
+
+  socket.onerror = (error) => {
+    console.log("Erro WebSocket: ", error);
+
+    if (onError) {
+      onError(error);
+    }
+  };
+}
+
+export function enviarMessagem(data) {
+  if (!socket) return;
+
+  socket.send(JSON.stringify(data));
+}
+
+export function desconectarWebSocket() {
+  if (!socket) return;
+
+  socket.close();
+}

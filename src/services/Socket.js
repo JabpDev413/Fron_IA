@@ -1,5 +1,5 @@
 let socket = null;
-const urlSocket = "wss://api-ia-1-ax16.onrender.com";
+const urlSocket = "wss://apiia-gcpapikey.up.railway.app";
 const urlSocketLocal = "ws://172.16.251.22:9191";
 
 export function conectarWebSocket({ onMessage, onOpen, onClose, onError }) {

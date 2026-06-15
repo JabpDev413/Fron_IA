@@ -7,8 +7,11 @@ import { useNavigate } from "react-router-dom";
 
 export const ImageBaseUrl = "http://172.16.251.22:9191/api/uploads";
 
+const urlRender = "https://api-ia-1-ax16.onrender.com";
+const urlLocal = "http://172.16.251.22:9191/api";
+
 const restClientAxios = axios.create({
-  baseURL: "http://172.16.251.22:9191/api",
+  baseURL: urlRender,
 });
 
 restClientAxios.interceptors.request.use((config) => {

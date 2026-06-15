@@ -1,8 +1,10 @@
 let socket = null;
+const urlSocket = "https://api-ia-1-ax16.onrender.com";
+const urlSocketLocal = "ws://172.16.251.22:9191";
 
 export function conectarWebSocket({ onMessage, onOpen, onClose, onError }) {
   const token = sessionStorage.getItem("token");
-  socket = new WebSocket(`ws://172.16.251.22:9191/api/messages?token=${token}`);
+  socket = new WebSocket(`wss://${urlSocket}/api/messages?token=${token}`);
 
   socket.onopen = () => {
     console.log("WebSocket conectado");

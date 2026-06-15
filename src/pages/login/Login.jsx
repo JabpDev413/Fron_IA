@@ -27,7 +27,7 @@ export function Login() {
         navigate("/chat");
       }
     } catch (error) {
-      console.log("erro api: " + error.response);
+      console.log("erro api: " + error.response.data);
       throw toast.error(
         error.response?.data?.message || "Error ao realizar login",
       );

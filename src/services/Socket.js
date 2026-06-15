@@ -17,8 +17,6 @@ export function conectarWebSocket({ onMessage, onOpen, onClose, onError }) {
   socket.onmessage = (event) => {
     try {
       const body = JSON.parse(event.data);
-      console.log("RAW WS:", event.data);
-      console.log("RAW body:", body);
       if (onMessage) {
         onMessage(body);
       }

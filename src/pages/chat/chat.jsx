@@ -123,7 +123,10 @@ export function Chat() {
 
         setLoadingMensagem(true);
 
-        console.log("Mensagem chega: ", conversa.mensagens);
+        console.log(
+          "Mensagem chega: ",
+          conversa.mensagens || conversa.conteudo,
+        );
 
         const nova = conversa.messagens?.[0];
 
